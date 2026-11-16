@@ -1,0 +1,88 @@
+brand,model,age_band,n,spearman_r_km_actual,p_value
+__ALL__,__ALL__,all,1385,-0.273,0.0
+Chevrolet,Beat,7-12y,10,-0.207,0.5655
+Chevrolet,Sail,7-12y,5,-0.9,0.0374
+Chevrolet,Spark,12+y,9,-0.437,0.2396
+Ford,EcoSport,3-7y,11,-0.156,0.647
+Ford,EcoSport,7-12y,6,-0.406,0.4247
+Ford,Fiesta,7-12y,8,-0.323,0.4346
+Ford,Fiesta,12+y,8,-0.214,0.6103
+Ford,Figo,3-7y,7,0.126,0.7876
+Ford,Figo,7-12y,15,-0.302,0.2733
+Ford,Figo,12+y,13,-0.203,0.5059
+Honda,Amaze,7-12y,8,-0.357,0.3851
+Honda,City,3-7y,6,-0.116,0.8268
+Honda,City,7-12y,10,-0.425,0.2207
+Honda,City,12+y,15,-0.512,0.0508
+Honda,Civic,12+y,5,0.632,0.2522
+Hyundai,Creta,7-12y,5,0.9,0.0374
+Hyundai,EON,3-7y,13,-0.431,0.1411
+Hyundai,EON,7-12y,16,-0.122,0.6536
+Hyundai,Grand i10,3-7y,14,-0.699,0.0054
+Hyundai,Grand i10,7-12y,14,-0.389,0.1691
+Hyundai,Santro,3-7y,5,-0.335,0.5811
+Hyundai,Santro Xing,12+y,16,-0.056,0.8378
+Hyundai,Verna,7-12y,16,-0.457,0.0752
+Hyundai,Verna,12+y,13,-0.322,0.2836
+Hyundai,Xcent,7-12y,8,0.061,0.886
+Hyundai,i10,7-12y,10,-0.223,0.5353
+Hyundai,i10,12+y,16,-0.603,0.0134
+Hyundai,i20,3-7y,14,0.079,0.7882
+Hyundai,i20,7-12y,30,-0.189,0.3179
+Mahindra,Bolero,3-7y,8,-0.252,0.5479
+Mahindra,Bolero,7-12y,23,-0.523,0.0105
+Mahindra,Bolero,12+y,14,-0.041,0.8894
+Mahindra,KUV 100,7-12y,6,-0.265,0.6121
+Mahindra,Scorpio,3-7y,6,0.116,0.8268
+Mahindra,Scorpio,7-12y,13,-0.391,0.1864
+Mahindra,Scorpio,12+y,19,-0.516,0.0236
+Mahindra,TUV,3-7y,5,-0.5,0.391
+Mahindra,TUV,7-12y,7,-0.613,0.1436
+Mahindra,XUV500,7-12y,17,-0.182,0.4856
+Maruti,800,12+y,22,-0.066,0.7716
+Maruti,Alto,12+y,25,-0.558,0.0037
+Maruti,Alto 800,3-7y,8,-0.012,0.9769
+Maruti,Alto 800,7-12y,25,-0.371,0.0682
+Maruti,Alto K10,7-12y,9,-0.323,0.3959
+Maruti,Baleno,3-7y,12,0.443,0.1493
+Maruti,Celerio,7-12y,8,-0.611,0.1077
+Maruti,Ertiga,3-7y,8,-0.443,0.2715
+Maruti,Ertiga,7-12y,21,-0.338,0.134
+Maruti,Ignis,3-7y,5,-0.6,0.2848
+Maruti,Omni,7-12y,5,-0.2,0.7471
+Maruti,Omni,12+y,9,-0.391,0.2985
+Maruti,Ritz,7-12y,11,-0.562,0.0718
+Maruti,S-Cross,3-7y,5,0.051,0.9347
+Maruti,SX4,7-12y,5,0.205,0.7406
+Maruti,Swift,3-7y,16,0.134,0.6197
+Maruti,Swift,7-12y,28,-0.028,0.8888
+Maruti,Swift,12+y,21,0.111,0.6306
+Maruti,Swift Dzire,3-7y,24,-0.014,0.9492
+Maruti,Swift Dzire,7-12y,35,-0.246,0.1547
+Maruti,Swift Dzire,12+y,8,0.291,0.4845
+Maruti,Vitara Brezza,7-12y,5,0.9,0.0374
+Maruti,Wagon R,3-7y,9,-0.571,0.108
+Maruti,Wagon R,7-12y,23,-0.394,0.0629
+Maruti,Wagon R,12+y,17,-0.523,0.0312
+Maruti,Zen,12+y,10,-0.166,0.6464
+Nissan,Terrano,7-12y,6,-0.754,0.0835
+Renault,Duster,7-12y,14,0.043,0.884
+Renault,KWID,3-7y,7,-0.543,0.2082
+Renault,KWID,7-12y,7,-0.491,0.2632
+Skoda,Rapid,7-12y,6,-0.783,0.0657
+Tata,C-Class,12+y,6,-0.059,0.9119
+Tata,Indica,12+y,14,-0.127,0.6643
+Tata,Indica Vista,7-12y,12,-0.491,0.105
+Tata,Indica Vista,12+y,8,-0.297,0.475
+Tata,Indigo,7-12y,9,-0.597,0.0899
+Tata,Indigo,12+y,14,-0.457,0.1001
+Tata,Manza,12+y,7,0.054,0.9084
+Tata,Nexon,3-7y,8,-0.036,0.9319
+Tata,Tiago,3-7y,8,-0.143,0.7358
+Toyota,Etios,7-12y,9,0.328,0.3892
+Toyota,Etios Liva,7-12y,6,-0.273,0.6004
+Toyota,Fortuner,7-12y,7,0.162,0.7283
+Toyota,Innova,7-12y,29,-0.353,0.06
+Toyota,Innova,12+y,7,0.165,0.7234
+Volkswagen,Polo,7-12y,11,-0.689,0.0191
+Volkswagen,Vento,7-12y,6,-0.638,0.1731

@@ -1,0 +1,14 @@
+{
+  "km_in_input_features": true,
+  "km_transformer_elements_change": 1,
+  "price_at_50k": 454134.424137931,
+  "price_at_150k": 454134.424137931,
+  "price_diff": 0.0,
+  "km_split_nodes": 3,
+  "km_importance_pct": 4.49510895204569,
+  "pct_cars_no_change_across_km_range": 95.0,
+  "model_max_depth": 8,
+  "model_min_samples_leaf": 2,
+  "model_ccp_alpha": 0.0,
+  "overall_spearman_km_price": -0.28978760999063274
+}

@@ -1,0 +1,22 @@
+factor_group,column_name,available,derived,pct_missing,n_unique,enabled,notes
+Age,year,True,False,0.0,29,True,Used to derive vehicle_age
+Age,vehicle_age,True,True,N/A,N/A,True,Derived: reference_year - year
+Usage,km_driven,True,False,0.0,921,True,
+Usage,high_mileage_flag,True,True,N/A,N/A,True,Derived: km_per_year > 20000
+Fuel & Transmission,fuel,True,False,0.0,4,True,
+Fuel & Transmission,transmission,True,False,0.0,2,True,
+Engine & Power,engine,True,False,2.72,121,True,Raw; parsed to engine_cc
+Engine & Power,engine_cc,True,True,N/A,N/A,True,Parsed from engine column
+Engine & Power,mileage,True,False,2.72,393,True,Raw; parsed to mileage_val
+Engine & Power,max_power,True,False,2.65,322,True,Raw; parsed to max_power_bhp
+Engine & Power,torque,True,False,2.73,441,True,Raw; parsed to torque_nm
+Ownership,owner,True,False,0.0,5,True,Encoded as owner_tier (1-5)
+Ownership,seller_type,True,False,0.0,3,True,
+Comfort,seats,True,False,2.72,9,True,
+Trim & Segment,trim_tier,True,True,N/A,N/A,True,Derived from name variant tokens
+Trim & Segment,body_segment,True,True,N/A,N/A,True,Derived from model lookup table
+Brand,name,True,False,0.0,2058,True,"Source for brand, model_name, trim_tier extraction"
+Brand,brand,True,True,N/A,N/A,True,Extracted from name
+Model,model_name,True,True,N/A,N/A,True,Extracted from name
+Location,city,False,False,N/A,N/A,False,NOT IN DATASET. Add 'India Used Car Dataset with City' from Kaggle for location features.
+Condition,accident_history,False,False,N/A,N/A,False,NOT IN DATASET. Not available in CarDekho v3 dataset.

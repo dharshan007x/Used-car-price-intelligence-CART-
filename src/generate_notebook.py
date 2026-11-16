@@ -1,0 +1,198 @@
+"""
+Script to generate the exploratory_analysis.ipynb Jupyter Notebook.
+"""
+import json
+from pathlib import Path
+
+notebook = {
+    "cells": [
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "# Used Car Price Prediction Using CART Regression Trees\n",
+                "### Batch 12 | Machine Learning Project\n",
+                "---\n",
+                "This notebook provides exploratory analysis, recursive binary tree splitting, depth experiments, and cost-complexity pruning."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import sys\n",
+                "from pathlib import Path\n",
+                "import pandas as pd\n",
+                "import numpy as np\n",
+                "import matplotlib.pyplot as plt\n",
+                "import seaborn as sns\n",
+                "\n",
+                "# Add project root to sys.path\n",
+                "sys.path.append('..')\n",
+                "from src.data_loader import load_raw_dataset\n",
+                "from src.data_validation import perform_data_validation\n",
+                "from src.feature_engineering import engineer_features\n",
+                "from src.cart_model import create_cart_regressor, evaluate_cart_performance\n",
+                "from src.depth_analysis import run_depth_experiments\n",
+                "from src.pruning import run_pruning_experiments"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 1. Data Acquisition and Cleaning"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "df_raw = load_raw_dataset('../data/raw/car_details_v3.csv')\n",
+                "print('Raw Dataset Dimensions:', df_raw.shape)\n",
+                "df_clean, audit = perform_data_validation(df_raw)\n",
+                "df_eng = engineer_features(df_clean)\n",
+                "print('Cleaned & Engineered Dimensions:', df_eng.shape)\n",
+                "df_eng.head()"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 2. Statistical Analysis and Feature Correlations"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "from src.eda import compute_statistical_summary\n",
+                "summary = compute_statistical_summary(df_eng)\n",
+                "display(summary)\n",
+                "\n",
+                "plt.figure(figsize=(10, 6))\n",
+                "sns.histplot(df_eng['selling_price'], kde=True, bins=50, color='royalblue')\n",
+                "plt.title('Distribution of Used Car Resale Prices (INR)')\n",
+                "plt.xlabel('Selling Price (₹)')\n",
+                "plt.show()"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 3. Tree Depth Experimentation\n",
+                "Comparing training vs validation performance across depths [1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, None]."
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "depth_df = pd.read_csv('../reports/depth_analysis.csv')\n",
+                "plt.figure(figsize=(12, 5))\n",
+                "\n",
+                "plt.subplot(1, 2, 1)\n",
+                "plt.plot(depth_df['depth_label'], depth_df['train_rmse'], label='Train RMSE', linestyle='--')\n",
+                "plt.plot(depth_df['depth_label'], depth_df['val_rmse'], label='Validation RMSE', color='red', linewidth=2)\n",
+                "plt.xticks(rotation=45)\n",
+                "plt.title('Tree Depth vs RMSE')\n",
+                "plt.ylabel('RMSE (₹)')\n",
+                "plt.legend()\n",
+                "\n",
+                "plt.subplot(1, 2, 2)\n",
+                "plt.plot(depth_df['depth_label'], depth_df['train_r2'], label='Train R²', linestyle='--')\n",
+                "plt.plot(depth_df['depth_label'], depth_df['val_r2'], label='Validation R²', color='green', linewidth=2)\n",
+                "plt.xticks(rotation=45)\n",
+                "plt.title('Tree Depth vs R² Score')\n",
+                "plt.ylabel('R² Score')\n",
+                "plt.legend()\n",
+                "\n",
+                "plt.tight_layout()\n",
+                "plt.show()"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 4. Cost-Complexity Pruning\n",
+                "$$R_\\alpha(T) = R(T) + \\alpha |T|$$"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "pruning_df = pd.read_csv('../reports/pruning_analysis.csv')\n",
+                "plt.figure(figsize=(12, 5))\n",
+                "\n",
+                "plt.subplot(1, 2, 1)\n",
+                "plt.semilogx(pruning_df['alpha'], pruning_df['total_nodes'], label='Total Nodes', color='purple')\n",
+                "plt.semilogx(pruning_df['alpha'], pruning_df['leaf_nodes'], label='Leaf Nodes', color='orange')\n",
+                "plt.title('Alpha vs Tree Complexity')\n",
+                "plt.xlabel('Alpha (Log Scale)')\n",
+                "plt.ylabel('Node Count')\n",
+                "plt.legend()\n",
+                "\n",
+                "plt.subplot(1, 2, 2)\n",
+                "plt.semilogx(pruning_df['alpha'], pruning_df['val_rmse'], label='Validation RMSE', color='red')\n",
+                "plt.semilogx(pruning_df['alpha'], pruning_df['train_rmse'], label='Train RMSE', linestyle='--')\n",
+                "plt.title('Alpha vs Prediction Error')\n",
+                "plt.xlabel('Alpha (Log Scale)')\n",
+                "plt.ylabel('RMSE (₹)')\n",
+                "plt.legend()\n",
+                "\n",
+                "plt.tight_layout()\n",
+                "plt.show()"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 5. Master Model Comparison"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "comp_df = pd.read_csv('../reports/model_comparison.csv')\n",
+                "display(comp_df)"
+            ]
+        }
+    ],
+    "metadata": {
+        "kernelspec": {
+            "display_name": "Python 3",
+            "language": "python",
+            "name": "python3"
+        },
+        "language_info": {
+            "name": "python",
+            "version": "3.11"
+        }
+    },
+    "nbformat": 4,
+    "nbformat_minor": 4
+}
+
+out_path = Path(__file__).resolve().parent.parent / "notebooks" / "exploratory_analysis.ipynb"
+out_path.parent.mkdir(parents=True, exist_ok=True)
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(notebook, f, indent=2)
+print(f"Generated notebook at {out_path}")

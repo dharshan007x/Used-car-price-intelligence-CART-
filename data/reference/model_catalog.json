@@ -1,0 +1,98 @@
+{
+    "_description": "Reference catalog of well-known models per brand sold in the Indian market. UI-only — NOT training data. No prices. Extend freely.",
+    "_show_catalog_only_models": true,
+    "_note": "Only models confirmed to exist in the Indian market are listed here.",
+    "Maruti": [
+        "Swift", "Swift Dzire", "Alto", "Alto 800", "Alto K10", "Wagon R",
+        "Baleno", "Brezza", "Vitara Brezza", "Ertiga", "XL6", "Ciaz",
+        "Ignis", "S-Cross", "S-Presso", "Celerio", "Celerio X", "Eeco",
+        "Omni", "Ritz", "SX4", "Zen", "A-Star", "Kizashi"
+    ],
+    "Hyundai": [
+        "i10", "i20", "Elite i20", "Grand i10", "Santro", "Santro Xing",
+        "Verna", "Creta", "Tucson", "Venue", "Elantra", "Xcent",
+        "Accent", "Getz", "Sonata", "i20 Active", "Aura"
+    ],
+    "Mahindra": [
+        "Scorpio", "XUV500", "XUV300", "XUV700", "Thar", "Bolero",
+        "KUV 100", "Marazzo", "Quanto", "Verito", "Xylo",
+        "Ssangyong Rexton", "NuvoSport", "TUV300", "Alturas G4"
+    ],
+    "Tata": [
+        "Nexon", "Harrier", "Safari", "Tigor", "Tiago", "Punch",
+        "Altroz", "Hexa", "Zest", "Bolt", "Manza", "Indica",
+        "Indigo", "Sumo", "Xenon", "Sierra"
+    ],
+    "Toyota": [
+        "Innova", "Fortuner", "Corolla", "Camry", "Etios", "Etios Liva",
+        "Glanza", "Yaris", "Land Cruiser", "Qualis", "Prado", "Urban Cruiser"
+    ],
+    "Honda": [
+        "City", "Amaze", "Jazz", "WR-V", "CR-V", "BR-V",
+        "Brio", "Civic", "Accord", "Mobilio", "Pilot"
+    ],
+    "Ford": [
+        "Figo", "EcoSport", "Freestyle", "Aspire", "Fiesta",
+        "Endeavour", "Fusion", "Classic", "Ikon", "Mondeo"
+    ],
+    "Renault": [
+        "Duster", "Kwid", "Triber", "Kiger", "Captur", "Koleos",
+        "Scala", "Lodgy", "Pulse", "Fluence"
+    ],
+    "Volkswagen": [
+        "Polo", "Vento", "Ameo", "CrossPolo", "Passat", "Jetta",
+        "GTI", "Tiguan", "Tiguan Allspace", "Taigun"
+    ],
+    "BMW": [
+        "3 Series", "5 Series", "7 Series", "6 Series",
+        "X1", "X3", "X4", "X5", "X6", "X7",
+        "1 Series", "2 Series", "4 Series", "i3", "i8"
+    ],
+    "Mercedes-Benz": [
+        "C-Class", "E-Class", "S-Class", "A-Class", "B-Class",
+        "CLA", "GLA", "GLC", "GLE", "GLS", "GL-Class", "M-Class",
+        "CLS", "SLK", "AMG GT"
+    ],
+    "Audi": [
+        "A3", "A4", "A6", "A8", "Q3", "Q5", "Q7", "TT", "R8", "e-tron"
+    ],
+    "Skoda": [
+        "Rapid", "Superb", "Octavia", "Fabia", "Yeti", "Laura",
+        "Kodiaq", "Kushaq", "Slavia"
+    ],
+    "Nissan": [
+        "Micra", "Sunny", "Terrano", "Kicks", "Magnite", "Teana", "Juke"
+    ],
+    "Chevrolet": [
+        "Beat", "Spark", "Sail", "Aveo", "Cruze", "Captiva",
+        "Enjoy", "Tavera", "Optra", "Trailblazer"
+    ],
+    "Datsun": [
+        "Go", "Go Plus", "Redigo"
+    ],
+    "Jaguar": [
+        "XF", "XE", "XJ", "F-Pace", "E-Pace", "I-Pace", "F-Type"
+    ],
+    "Volvo": [
+        "XC40", "XC60", "XC90", "V40", "S60", "S90", "V90"
+    ],
+    "Fiat": [
+        "Punto", "Grande Punto", "Linea", "Avventura", "Palio", "Siena"
+    ],
+    "Kia": [
+        "Seltos", "Sonet", "Carens", "Carnival", "Stinger"
+    ],
+    "MG": [
+        "Hector", "Hector Plus", "ZS EV", "Gloster", "Astor"
+    ],
+    "Jeep": [
+        "Compass", "Wrangler", "Grand Cherokee", "Meridian"
+    ],
+    "Isuzu": [
+        "D-Max", "MU-X", "MU-7"
+    ],
+    "Land Rover": [
+        "Range Rover", "Discovery", "Defender", "Freelander",
+        "Discovery Sport", "Range Rover Sport", "Range Rover Evoque"
+    ]
+}

@@ -1,0 +1,24 @@
+# Environments
+venv/
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/

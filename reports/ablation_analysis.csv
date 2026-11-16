@@ -1,0 +1,5 @@
+feature_set,description,n_input_features,n_transformed_cols,val_mae,val_rmse,val_r2,test_mae,test_rmse,test_r2
+A_core_only,"Core physics features only (age, km, engine, mileage, power)",7,11,107876.0,245121.0,0.8045,109291.0,235309.0,0.8273
+B_plus_brand_model,Core + Brand + Model name,9,115,103755.0,222237.0,0.8393,100878.0,198066.0,0.8776
+C_plus_market,"B + ownership tier, seats, torque, seller type, trim, body segment",15,130,100963.0,220531.0,0.8418,101066.0,201805.0,0.8729
+D_full,Full market-grade feature set (C + high-mileage flag + km_per_year + km_ratio),18,133,102362.0,221126.0,0.8409,99880.0,197822.0,0.8779
