@@ -459,9 +459,3 @@ CART is a step function — the adjustment layer smooths km response but does no
 
 ---
 
-## 19. Batch 12 Academic Declaration
-- **Academic Batch**: Batch 12
-- **Subject**: Machine Learning Project
-- **Domain**: Supervised Learning (Regression Trees / CART)
-- **Primary Algorithm**: `sklearn.tree.DecisionTreeRegressor` (Criterion: `squared_error`)
-- **Status**: Complete, Tested, and Academically Defensible.
