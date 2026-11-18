@@ -1,10 +1,11 @@
 # Used Car Price Intelligence – CART Regression System
 ### Batch 12 | Machine Learning Academic Project
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dharshan007x/Used-car-price-intelligence-CART-/blob/main/notebooks/used_car_price_intelligence_colab.ipynb)
 ![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4+-orange.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
-![Tests](https://img.shields.io/badge/Tests-18%20Passing-brightgreen.svg)
+![Tests](https://img.shields.io/badge/Tests-49%20Passing-brightgreen.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ---
@@ -329,15 +330,25 @@ Rather than fabricating synthetic confidence percentages, the system computes de
 
 ## 16. Installation and Setup Instructions
 
-### Prerequisites
+### ⚡ Quick Launch in Google Colab (Zero Local Setup)
+Run the entire end-to-end CART intelligence pipeline directly in your browser without installing anything locally:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dharshan007x/Used-car-price-intelligence-CART-/blob/main/notebooks/used_car_price_intelligence_colab.ipynb)
+
+- **Master Colab Notebook**: [used_car_price_intelligence_colab.ipynb](https://colab.research.google.com/github/dharshan007x/Used-car-price-intelligence-CART-/blob/main/notebooks/used_car_price_intelligence_colab.ipynb)
+- **EDA & Pruning Notebook**: [exploratory_analysis.ipynb](https://colab.research.google.com/github/dharshan007x/Used-car-price-intelligence-CART-/blob/main/notebooks/exploratory_analysis.ipynb)
+
+---
+
+### Prerequisites (For Local Setup)
 - Python 3.11.x (or compatible Python 3.10+)
 - Git
 - Command Prompt / PowerShell (Windows) or Terminal (macOS/Linux)
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/your-username/used-car-price-prediction.git
-cd used-car-price-prediction
+git clone https://github.com/dharshan007x/Used-car-price-intelligence-CART-.git
+cd Used-car-price-intelligence-CART-
 ```
 
 ### Step 2: Set Up Virtual Environment
@@ -374,7 +385,7 @@ This executes data loading, schema validation, feature engineering, tree depth e
 ```bash
 pytest tests -v
 ```
-Verifies all 18 unit and integration tests across data validation, preprocessing, model training, pruning paths, and explainability.
+Verifies all 49 unit and integration tests across data validation, preprocessing, model training, pruning paths, and explainability.
 
 ### Step 6: Launch the Streamlit Dashboard
 ```bash
